@@ -1,0 +1,5 @@
+# Force HTTPS redirects
+http://ltspice.surge.sh/*  https://ltspice.surge.sh/:splat  301!
+
+# Handle 404 errors - redirect to index
+/*    /index.html   200

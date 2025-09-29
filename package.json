@@ -1,0 +1,30 @@
+{
+  "name": "ltspice-projects-showcase",
+  "version": "1.0.0",
+  "description": "Static website showcasing professional LTspice circuit simulation projects",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "deploy": "npm run build && surge dist/",
+    "serve": "node -e \"const handler = require('serve-handler'); const http = require('http'); const server = http.createServer((req, res) => handler(req, res, {public: '.'})); server.listen(3000, () => console.log('🚀 Server running at http://localhost:3000'));\""
+  },
+  "keywords": [
+    "ltspice",
+    "circuit-simulation",
+    "electronics",
+    "spice",
+    "engineering"
+  ],
+  "author": "LTspice Projects Showcase",
+  "license": "MIT",
+  "devDependencies": {
+    "serve-handler": "^6.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/ltspice-projects-showcase"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

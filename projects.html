@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - LTspice Projects Showcase</title>
+    <meta name="description" content="Browse our collection of professional LTspice circuit simulation projects, including analog, digital, and power electronics designs">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ltspice.surge.sh/projects.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects - LTspice Projects Showcase">
+    <meta property="og:description" content="Browse our collection of professional LTspice circuit simulation projects, including analog, digital, and power electronics designs">
+    <meta property="og:url" content="https://ltspice.surge.sh/projects.html">
+    <meta property="og:image" content="https://ltspice.surge.sh/assets/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects - LTspice Projects Showcase">
+    <meta name="twitter:description" content="Browse our collection of professional LTspice circuit simulation projects, including analog, digital, and power electronics designs">
+    <meta name="twitter:image" content="https://ltspice.surge.sh/assets/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <main role="main">
+        <section class="hero" role="banner">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">PROJECTS<br><span class="hero-accent">SHOWCASE</span></h1>
+                    <p class="hero-subtitle">Professional LTspice simulations and electronic design solutions featuring comprehensive documentation, detailed schematics, and downloadable resources</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-hero-primary" role="button">BROWSE PROJECTS</a>
+                        <a href="contact.html" class="btn btn-hero-secondary" role="button">CONTACT US</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-filters" role="region" aria-labelledby="filters-title">
+            <div class="container">
+                <div class="filters-header">
+                    <h2 class="filters-title">BROWSE & FILTER</h2>
+                    <p class="filters-subtitle">Find the perfect circuit for your needs</p>
+                </div>
+                <div class="filters-container">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all" aria-pressed="true">
+                            <span class="filter-icon"><span class="material-icons">apps</span></span>
+                            <span class="filter-text">ALL</span>
+                        </button>
+                        <button class="filter-btn" data-filter="analog" aria-pressed="false">
+                            <span class="filter-icon"><span class="material-icons">show_chart</span></span>
+                            <span class="filter-text">ANALOG</span>
+                        </button>
+                        <button class="filter-btn" data-filter="digital" aria-pressed="false">
+                            <span class="filter-icon"><span class="material-icons">memory</span></span>
+                            <span class="filter-text">DIGITAL</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid-section" role="region" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="projects-header">
+                    <div id="projects-count" class="projects-count"></div>
+                </div>
+                
+                <div id="projects-grid" class="projects-grid" role="list" aria-live="polite">
+                    <!-- Projects will be loaded dynamically -->
+                </div>
+                
+                <div id="loading-state" class="loading-state" role="status" aria-label="Loading projects">
+                    <p>LOADING PROJECTS...</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="pagination-section" role="navigation" aria-label="Projects pagination">
+            <div class="container">
+                <div id="pagination" class="pagination hidden">
+                    <!-- Pagination will be generated dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p class="footer-text"></p>
+        </div>
+    </footer>
+
+    <!-- Force HTTPS redirect -->
+    <script>
+        if (location.protocol !== 'https:' && location.hostname === 'ltspice.surge.sh') {
+            location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+        }
+    </script>
+    <script src="assets/js/projects-data.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
